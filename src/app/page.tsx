@@ -14,10 +14,10 @@ export default function HomePage() {
       }}
     >
       <Typography variant="h3" sx={{ fontWeight: 700 }}>
-        Vyse
+        Mizu Firuta
       </Typography>
       <Typography sx={{ color: '#666', mt: 1 }}>
-        Welcome to the Vyse Application
+        Welcome to Mizu Firuta
       </Typography>
     </Box>
   );

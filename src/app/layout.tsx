@@ -3,8 +3,8 @@ import { AllProviders } from '@/providers/AllProviders';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Vyse',
-  description: 'Vyse Application',
+  title: 'Mizu Firuta',
+  description: 'Mizu Firuta',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
