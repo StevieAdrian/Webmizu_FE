@@ -18,27 +18,24 @@ interface AllProvidersProps {
 
 export function AllProviders({ children }: AllProvidersProps) {
   const [queryClient] = useState(() => getQueryClient());
-  const [emotionCache] = useState(() => createCache({ key: 'css', prepend: true }));
 
   return (
     <QueryClientProvider client={queryClient}>
-      <CacheProvider value={emotionCache}>
-        <SnackbarProvider
-          maxSnack={3}
-          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-          autoHideDuration={5000}
-          style={{ maxWidth: 300 }}
-        >
-          <ThemeProvider theme={theme}>
-            <StyledEngineProvider enableCssLayer>
-              <GlobalStyles styles={`@layer theme, base, mui, components, utilities;`} />
-              <UseModalProvider>
-                {children}
-              </UseModalProvider>
-            </StyledEngineProvider>
-          </ThemeProvider>
-        </SnackbarProvider>
-      </CacheProvider>
+      <SnackbarProvider
+        maxSnack={3}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        autoHideDuration={5000}
+        style={{ maxWidth: 300 }}
+      >
+        <ThemeProvider theme={theme}>
+          <StyledEngineProvider enableCssLayer>
+            <GlobalStyles styles={`@layer theme, base, mui, components, utilities;`} />
+            <UseModalProvider>
+              {children}
+            </UseModalProvider>
+          </StyledEngineProvider>
+        </ThemeProvider>
+      </SnackbarProvider>
     </QueryClientProvider>
   );
 }
