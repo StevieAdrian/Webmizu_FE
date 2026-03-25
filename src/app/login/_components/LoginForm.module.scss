@@ -1,0 +1,169 @@
+$primary: #00628e;
+$on-surface: #191c1e;
+$on-surface-variant: #3e4850;
+$outline: #6f7881;
+$input-bg: #e0e3e5;
+$outline-variant: #bec8d1;
+$font-body: 'Inter', sans-serif;
+
+.card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 32px 40px;
+  border: 1px solid rgba($outline-variant, 0.15);
+  box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.06);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: $on-surface-variant;
+  font-family: $font-body;
+}
+
+.forgotLink {
+  font-size: 12px;
+  font-weight: 600;
+  color: $primary;
+  text-decoration: none;
+  font-family: $font-body;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  inset: 0 auto 0 0;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: $outline;
+  font-size: 20px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  background-color: $input-bg;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  color: $on-surface;
+  font-size: 14px;
+  font-family: $font-body;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: $outline;
+  }
+
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: $primary;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  color: $on-surface-variant;
+  cursor: pointer;
+  user-select: none;
+  font-family: $font-body;
+}
+
+.button {
+  width: 100%;
+  background-color: $primary;
+  color: #fff;
+  font-weight: 700;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: $font-body;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 10px 15px -3px rgba($primary, 0.2);
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.buttonIcon {
+  font-size: 20px;
+}
+
+.divider {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba($outline-variant, 0.15);
+  text-align: center;
+}
+
+.supportText {
+  font-size: 14px;
+  color: $on-surface-variant;
+  font-family: $font-body;
+}
+
+.supportLink {
+  color: $primary;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 4px;
+  font-family: $font-body;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

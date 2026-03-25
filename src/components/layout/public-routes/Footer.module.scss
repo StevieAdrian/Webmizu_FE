@@ -1,0 +1,61 @@
+$primary: #00628e;
+$outline-variant: #bec8d1;
+$font-body: 'Inter', sans-serif;
+$font-headline: 'Manrope', sans-serif;
+
+.footer {
+  width: 100%;
+  border-top: 1px solid rgba($outline-variant, 0.15);
+  background-color: #f7f9fb;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brandName {
+  font-weight: 700;
+  color: $primary;
+  font-family: $font-headline;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #64748b;
+  font-family: $font-body;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.link {
+  font-size: 12px;
+  color: #64748b;
+  text-decoration: none;
+  font-family: $font-body;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $primary;
+  }
+}
