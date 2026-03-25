@@ -1,15 +1,19 @@
 'use client';
 
 import { useState } from 'react';
+import { useLogin } from '@/hooks/useAuth';
 import styles from './LoginForm.module.scss';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const loginMutation = useLogin();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!email || !password) return;
+    loginMutation.mutate({ email, password });
   };
 
   return (
@@ -74,8 +78,8 @@ export default function LoginForm() {
           </label>
         </div>
 
-        <button type="submit" className={styles.button}>
-          <span>Sign In</span>
+        <button type="submit" className={styles.button} disabled={loginMutation.isPending}>
+          <span>{loginMutation.isPending ? 'Signing in...' : 'Sign In'}</span>
           <span className={`material-symbols-outlined ${styles.buttonIcon}`}>
             arrow_forward
           </span>
