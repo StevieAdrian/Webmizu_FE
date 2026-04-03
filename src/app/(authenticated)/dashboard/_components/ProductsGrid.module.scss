@@ -26,6 +26,13 @@ $font-headline: 'Manrope', sans-serif;
   &:hover { text-decoration: underline; }
 }
 
+.stateText {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  color: #64748b;
+  font-family: $font-body;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -75,9 +82,11 @@ $font-headline: 'Manrope', sans-serif;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #22c55e;
   font-family: $font-body;
 }
+
+.statusActive { color: #22c55e; }
+.statusExpired { color: #fb923c; }
 
 .productName {
   font-weight: 700;

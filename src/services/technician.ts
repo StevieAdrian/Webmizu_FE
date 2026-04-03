@@ -1,15 +1,11 @@
 import { ApiService } from '@/constants/api-service';
+import { fetchWithAuthRetry } from '@/services/auth-fetch';
 import type { ITechnicianItem } from '@/interfaces/technician';
-
-function getAuthHeader(): HeadersInit {
-  const token = typeof window !== 'undefined' ? localStorage.getItem('access_token') : null;
-  return token ? { Authorization: `Bearer ${token}` } : {};
-}
 
 export const technicianService = {
   getTechnicians: async (): Promise<ITechnicianItem[]> => {
-    const res = await fetch(`${ApiService.api}/api/v1/technicians`, {
-      headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+    const res = await fetchWithAuthRetry(`${ApiService.api}/api/v1/technicians`, {
+      headers: { 'Content-Type': 'application/json' },
     });
 
     const data = await res.json();
@@ -22,8 +18,8 @@ export const technicianService = {
   },
 
   getTechnicianById: async (id: string): Promise<ITechnicianItem> => {
-    const res = await fetch(`${ApiService.api}/api/v1/technicians/${id}`, {
-      headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+    const res = await fetchWithAuthRetry(`${ApiService.api}/api/v1/technicians/${id}`, {
+      headers: { 'Content-Type': 'application/json' },
     });
 
     const data = await res.json();
