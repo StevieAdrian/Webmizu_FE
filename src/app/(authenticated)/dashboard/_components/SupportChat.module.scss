@@ -1,0 +1,162 @@
+$primary: #00628e;
+$on-surface: #191c1e;
+$font-body: 'Inter', sans-serif;
+$font-headline: 'Manrope', sans-serif;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: $on-surface;
+  font-family: $font-headline;
+}
+
+.onlineBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #22c55e;
+  font-family: $font-body;
+}
+
+.onlineDot {
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e;
+  border-radius: 50%;
+}
+
+.card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+// Received message (left)
+.messageRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.messageSent {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  flex-shrink: 0;
+}
+
+.avatarIcon {
+  font-size: 20px;
+  color: #64748b;
+  font-variation-settings: 'FILL' 1;
+}
+
+.messageContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageSent .messageContent {
+  align-items: flex-end;
+}
+
+.bubble {
+  padding: 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  max-width: 200px;
+  font-family: $font-body;
+  line-height: 1.4;
+}
+
+.bubbleReceived {
+  background-color: #f1f5f9;
+  color: $on-surface;
+  border-top-left-radius: 0;
+}
+
+.bubbleSent {
+  background-color: $primary;
+  color: #fff;
+  border-top-right-radius: 0;
+}
+
+.messageTime {
+  font-size: 8px;
+  color: #94a3b8;
+  margin-top: 4px;
+  font-family: $font-body;
+}
+
+// Input area
+.inputArea {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  background-color: #f8fafc;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-family: $font-body;
+  color: $on-surface;
+  outline: none;
+
+  &::placeholder { color: #94a3b8; }
+  &:focus { box-shadow: 0 0 0 1px $primary; }
+}
+
+.sendBtn {
+  background-color: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+
+  &:hover { background-color: darken($primary, 8%); }
+}
+
+.sendIcon { font-size: 18px; }

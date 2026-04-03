@@ -1,0 +1,137 @@
+$primary: #00628e;
+$on-surface: #191c1e;
+$font-body: 'Inter', sans-serif;
+$font-headline: 'Manrope', sans-serif;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: $on-surface;
+  font-family: $font-headline;
+}
+
+.viewAll {
+  font-size: 12px;
+  font-weight: 700;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+.list { display: flex; flex-direction: column; gap: 16px; }
+
+// Reminder card base
+.reminder {
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.reminderBlue {
+  background-color: rgba(#dbeafe, 0.3);
+  border: 1px solid #bfdbfe;
+}
+
+.reminderOrange {
+  background-color: rgba(#ffedd5, 0.3);
+  border: 1px solid #fed7aa;
+}
+
+.reminderGreen {
+  background-color: rgba(#dcfce7, 0.3);
+  border: 1px solid #bbf7d0;
+}
+
+// Icon left
+.iconWrap {
+  padding: 12px;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconBlue { background-color: $primary; }
+.iconOrange { background-color: #fb923c; }
+.iconGreen { background-color: #22c55e; }
+
+.reminderIcon {
+  font-size: 24px;
+  font-variation-settings: 'FILL' 1;
+}
+
+// Content
+.reminderContent { flex: 1; }
+
+.reminderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.reminderTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: $on-surface;
+  font-family: $font-body;
+}
+
+.timeLabel {
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-family: $font-body;
+}
+
+.timeLabelBlue { color: $primary; }
+.timeLabelOrange { color: #fb923c; }
+.timeLabelGreen { color: #22c55e; }
+
+.reminderDesc {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  font-family: $font-body;
+}
+
+.details {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: #94a3b8;
+  font-family: $font-body;
+}
+
+.detailIcon { font-size: 14px; }
+
+.reminderLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+.linkOrange { color: #fb923c; }
+.linkGreen { color: #22c55e; }

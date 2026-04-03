@@ -16,7 +16,7 @@ export function useLogin() {
       localStorage.setItem('refresh_token', session.refresh_token);
 
       enqueueSnackbar('Login successful', { variant: 'success' });
-      router.push('/');
+      router.push('/dashboard');
     },
     onError: (error) => {
       enqueueSnackbar(error.message || 'Login failed', { variant: 'error' });

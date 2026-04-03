@@ -1,0 +1,90 @@
+$primary: #00628e;
+$on-surface: #191c1e;
+$font-body: 'Inter', sans-serif;
+$font-headline: 'Manrope', sans-serif;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: $on-surface;
+  font-family: $font-headline;
+}
+
+.viewAll {
+  font-size: 12px;
+  font-weight: 700;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+.list { display: flex; flex-direction: column; gap: 12px; }
+
+.invoice {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.invoiceIcon {
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invoiceIconSymbol {
+  font-size: 24px;
+  font-variation-settings: 'FILL' 1;
+}
+
+.iconGreen { background-color: #f0fdf4; color: #22c55e; }
+.iconOrange { background-color: #fff7ed; color: #f97316; }
+.iconBlue { background-color: #e8f4f8; color: $primary; }
+
+.invoiceContent { flex: 1; }
+
+.invoiceNumber {
+  font-size: 12px;
+  font-weight: 700;
+  color: $on-surface;
+  font-family: $font-body;
+}
+
+.invoiceDesc {
+  font-size: 10px;
+  color: #94a3b8;
+  font-family: $font-body;
+}
+
+.invoiceRight { text-align: right; }
+
+.invoiceAmount {
+  font-size: 12px;
+  font-weight: 700;
+  color: $on-surface;
+  font-family: $font-body;
+}
+
+.invoiceStatus {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: $font-body;
+}
+
+.statusPaid { color: #22c55e; }
+.statusPending { color: #fb923c; }

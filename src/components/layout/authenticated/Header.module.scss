@@ -1,0 +1,181 @@
+$primary: #00628e;
+$on-surface: #191c1e;
+$outline-variant: #bec8d1;
+$font-body: 'Inter', sans-serif;
+$font-headline: 'Manrope', sans-serif;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
+  border-bottom: 1px solid rgba($outline-variant, 0.3);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+
+  @media (min-width: 640px) { padding: 0 24px; }
+  @media (min-width: 1024px) { padding: 0 32px; }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brandLogo {
+  width: 32px;
+  height: 32px;
+  background-color: $primary;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandLogoIcon {
+  font-size: 20px;
+  color: #fff;
+  font-variation-settings: 'FILL' 1;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-weight: 700;
+  color: $on-surface;
+  font-size: 14px;
+  line-height: 1;
+  font-family: $font-headline;
+}
+
+.brandSub {
+  font-size: 9px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: $font-body;
+}
+
+.nav {
+  display: none;
+  height: 100%;
+  gap: 32px;
+
+  @media (min-width: 768px) { display: flex; }
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 4px;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  font-family: $font-body;
+  transition: color 0.2s, border-color 0.2s;
+
+  &:hover { color: $on-surface; }
+}
+
+.active {
+  color: $primary;
+  border-bottom-color: $primary;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notifButton {
+  position: relative;
+  padding: 4px;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: color 0.2s;
+
+  &:hover { color: #64748b; }
+}
+
+.notifIcon { font-size: 24px; }
+
+.notifBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 2px solid #fff;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileInfo {
+  text-align: right;
+  display: none;
+
+  @media (min-width: 640px) { display: block; }
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 700;
+  color: $on-surface;
+  line-height: 1;
+  font-family: $font-body;
+}
+
+.profileId {
+  font-size: 10px;
+  color: #94a3b8;
+  font-family: $font-body;
+}
+
+.profileAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid $primary;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8f4f8;
+  color: $primary;
+}
+
+.avatarIcon {
+  font-size: 36px;
+  font-variation-settings: 'FILL' 1;
+}

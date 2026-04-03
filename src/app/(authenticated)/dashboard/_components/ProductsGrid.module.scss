@@ -1,0 +1,175 @@
+$primary: #00628e;
+$on-surface: #191c1e;
+$font-body: 'Inter', sans-serif;
+$font-headline: 'Manrope', sans-serif;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: $on-surface;
+  font-family: $font-headline;
+}
+
+.viewAll {
+  font-size: 12px;
+  font-weight: 700;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media (min-width: 768px) { grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 1024px) { grid-template-columns: repeat(3, 1fr); }
+}
+
+// Product card
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cardBody { padding: 20px; }
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.productIcon {
+  padding: 12px;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productIconSymbol {
+  font-size: 24px;
+  font-variation-settings: 'FILL' 1;
+}
+
+.iconBlue { background-color: $primary; }
+.iconPurple { background-color: #a855f7; }
+.iconGreen { background-color: #16a34a; }
+
+.statusBadge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #22c55e;
+  font-family: $font-body;
+}
+
+.productName {
+  font-weight: 700;
+  color: $on-surface;
+  font-size: 14px;
+  font-family: $font-body;
+}
+
+.productModel {
+  font-size: 10px;
+  color: #94a3b8;
+  font-family: $font-body;
+}
+
+.infoList {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748b;
+  font-family: $font-body;
+}
+
+.infoIcon { font-size: 18px; }
+.infoIconBlue { color: $primary; }
+.infoIconPurple { color: #a855f7; }
+.infoIconGreen { color: #16a34a; }
+
+// Progress bar
+.progress { margin-top: 24px; }
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.progressLabel {
+  font-size: 10px;
+  color: #94a3b8;
+  font-family: $font-body;
+}
+
+.progressValue {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: $font-body;
+}
+
+.progressBlue { color: $primary; }
+.progressPurple { color: #a855f7; }
+.progressOrange { color: #fb923c; }
+
+.progressTrack {
+  width: 100%;
+  height: 6px;
+  border-radius: 99px;
+  background-color: #f1f5f9;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 99px;
+}
+
+.barBlue { background-color: $primary; }
+.barPurple { background-color: #a855f7; }
+.barGray { background-color: #cbd5e1; }
+
+// Footer button
+.cardAction {
+  width: 100%;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: $font-body;
+  transition: filter 0.2s;
+
+  &:hover { filter: brightness(0.92); }
+}
+
+.btnBlue { background-color: $primary; }
+.btnPurple { background-color: #a855f7; }
+.btnGreen { background-color: #16a34a; }

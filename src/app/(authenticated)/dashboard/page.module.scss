@@ -1,0 +1,29 @@
+$font-body: 'Inter', sans-serif;
+
+.main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 16px;
+
+  @media (min-width: 640px) { padding: 32px 24px; }
+  @media (min-width: 1024px) { padding: 32px 32px; }
+}
+
+.section { margin-bottom: 32px; }
+
+.middleGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+
+  @media (min-width: 1024px) { grid-template-columns: 2fr 1fr; }
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 48px;
+
+  @media (min-width: 1024px) { grid-template-columns: 1fr 1fr; }
+}
