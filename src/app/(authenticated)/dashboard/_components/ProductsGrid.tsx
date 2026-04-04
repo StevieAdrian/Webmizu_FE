@@ -87,9 +87,9 @@ export default function ProductsGrid() {
         progressValue: isExpired ? 'Expired' : 'Active',
         progressPercent: 100,
         actionLabel: isExpired ? 'Subscribe Contract' : 'View Details',
+        ...variant,
         progressColor: isExpired ? 'progressOrange' : variant.progressColor,
         barColor: isExpired ? 'barGray' : variant.barColor,
-        ...variant,
       };
     });
   }, [customerProducts, productCatalogs]);
