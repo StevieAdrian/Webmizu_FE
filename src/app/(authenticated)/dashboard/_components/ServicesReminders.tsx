@@ -115,8 +115,7 @@ function ContractCard({
 }
 
 function TaskCard({ task, techniciansMap }: { task: ITask; techniciansMap: Map<string, ITechnicianItem> }) {
-  const variant = getStatusVariant(task.status, task.task_date);
-  const config = variantConfig[variant];
+  const config = variantConfig['blue'];
   const { label: timeLabel } = getRelativeTimeLabel(task.task_date);
   const technician = task.technician_id ? techniciansMap.get(task.technician_id) : null;
 
@@ -137,9 +136,7 @@ function TaskCard({ task, techniciansMap }: { task: ITask; techniciansMap: Map<s
           <span className={`${styles.timeLabel} ${config.timeLabel}`}>{timeLabel}</span>
         </div>
         <p className={styles.reminderDesc}>
-          {task.description ?? (variant === 'green'
-            ? `Maintenance completed on ${formattedDate}`
-            : `Next maintenance scheduled for ${formattedDate}`)}
+          {task.description ?? `Next maintenance scheduled for ${formattedDate}`}
         </p>
         {technician && (
           <div className={styles.details}>
@@ -148,12 +145,6 @@ function TaskCard({ task, techniciansMap }: { task: ITask; techniciansMap: Map<s
               Technician: {technician.name}
             </span>
           </div>
-        )}
-        {variant === 'orange' && (
-          <a href="#" className={`${styles.reminderLink} ${styles.linkOrange}`}>Renew Contract →</a>
-        )}
-        {variant === 'green' && (
-          <a href="#" className={`${styles.reminderLink} ${styles.linkGreen}`}>View Report →</a>
         )}
       </div>
     </div>
