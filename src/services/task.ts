@@ -14,6 +14,7 @@ export const taskService = {
     }
 
     const res = await fetch(url.toString(), {
+      cache: 'no-store',
       headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
     });
 
